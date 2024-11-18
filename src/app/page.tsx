@@ -1,9 +1,20 @@
+import Card from '@/components/Card'
+import CategoryList from '@/components/CategoryList'
+import Featured from '@/components/Featured'
+import Menu from '@/components/Menu'
 import React from 'react'
 
-const page = () => {
+const Home = () => {
   return (
-    <div>page</div>
+    <div>
+      <Featured />
+      <CategoryList />
+      <div>
+        <Card />
+        <Menu />
+      </div>
+    </div>
   )
 }
 
-export default page
+export default Home
