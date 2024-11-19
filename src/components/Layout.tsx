@@ -12,7 +12,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      {!hideLayout && <Navbar />} {children} {!hideLayout && <Footer />}
+      {!hideLayout && <Navbar />}
+      <div className="px-5 lg:px-20">
+        {children}
+      </div>
+       {!hideLayout && <Footer />}
     </>
   );
 };

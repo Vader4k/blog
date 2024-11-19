@@ -13,6 +13,10 @@ export default {
         foreground: "var(--foreground)",
         softbg: "var(--softbg)",
         softTextColor: "var(--softTextColor)",
+        darkbg: "var(--darkbg)",
+        darkText: "var(--darkText)",
+        darksoftbg: "var(--darksoftbg)",
+        darkSoftText: "var(--darkSoftText)"
       },
     },
   },

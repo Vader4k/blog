@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --softbg: #f0f0f0;
-  --softTextColor: #626262
+  --bg:white;
+  --textColor:black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
+  --darkbg: #0f172a;
+  --darkText: #ddd;
+  --darksoftbg: #1f273a;
+  --darkSoftText: #a6a6a6;
 }
 
