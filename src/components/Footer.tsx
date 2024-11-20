@@ -3,7 +3,7 @@ import { footerLinks } from "@/lib/footer";
 
 const Footer = () => {
   return (
-    <footer className="px-5 border-t md:mt-20 py-8 md:px-20 flex-col gap-5 md:flex-row flex items-start justify-between w-full">
+    <footer className="px-5 border-t py-8 md:px-20 flex-col gap-5 md:flex-row flex items-start justify-between w-full">
       <div className="flex flex-col gap-2 flex-1">
         <div className="flex items-center gap-1">
           <Image src={"/logo.png"} alt="logo" width={40} height={40} />
