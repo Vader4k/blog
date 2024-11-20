@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { categories } from "@/lib/categories";
+import Link from "next/link";
 
 const colorMap: { [key: string]: string } = {
   'pink-300': '#FBBFCA',
@@ -14,10 +15,11 @@ const CategoryList = () => {
   return (
     <div className="py-10">
       <h1 className="font-semibold text-4xl">Popular Categories</h1>
-      <div className="flex justify-between py-14">
+      <div className="flex justify-between py-10 mt-5 gap-10">
         {categories.map((category) => (
-          <span
-            className="flex items-center gap-3 px-16 py-4 rounded-lg"
+          <Link
+            href={category.url}
+            className="flex items-center justify-center gap-3 w-full py-4 rounded-lg"
             key={category.id}
             style={{ backgroundColor: colorMap[category.color] }}
           >
@@ -27,7 +29,7 @@ const CategoryList = () => {
               alt={category.name + " icon"}
             />
             <p className="capitalize text-sm">{category.name}</p>
-          </span>
+          </Link>
         ))}
       </div>
     </div>

@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <Featured />
       <CategoryList />
-      <div>
+      <div className='flex justify-between'>
         <Card />
         <Menu />
       </div>

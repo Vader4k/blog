@@ -1,0 +1,48 @@
+export const recentPosts = [
+  {
+    id: 1,
+    image: "/44775.jpg",
+    title: "Lorem ipsum dolor sit amet consectetur adipis Laboriosam, autem?",
+    date: "01.02.2023",
+    category: "Travel",
+    author: "Danie",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? ",
+  },
+  {
+    id: 2,
+    image: "/44775.jpg",
+    title: "Lorem ipsum dolor sit amet consectetur adipis Laboriosam, autem?",
+    date: "01.02.2023",
+    category: "Travel",
+    author: "Danie",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? ",
+  },
+  {
+    id: 3,
+    image: "/44775.jpg",
+    title: "Lorem ipsum dolor sit amet consectetur adipis Laboriosam, autem?",
+    date: "01.02.2023",
+    category: "Travel",
+    author: "Danie",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? ",
+  },
+
+  {
+    id: 4,
+    image: "/44775.jpg",
+    title: "Lorem ipsum dolor sit amet consectetur adipis Laboriosam, autem?",
+    date: "01.02.2023",
+    category: "Travel",
+    author: "Danie",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? ",
+  },
+  {
+    id: 5,
+    image: "/44775.jpg",
+    title: "Lorem ipsum dolor sit amet consectetur adipis Laboriosam, autem?",
+    date: "01.02.2023",
+    category: "Travel",
+    author: "Danie",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, autem? ",
+  },
+];
