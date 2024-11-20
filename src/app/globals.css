@@ -13,3 +13,6 @@
   --darkSoftText: #a6a6a6;
 }
 
+body {
+  scroll-behavior: smooth;
+}

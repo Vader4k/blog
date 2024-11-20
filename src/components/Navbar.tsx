@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex-1 block md:hidden">
           <Image
             className=""
-            src={"/sun.png"}
+            src={"/logo.png"}
             alt="logo"
             width={30}
             height={30}
@@ -57,7 +57,7 @@ const Navbar = () => {
         </button>
       </nav>
       {isNavOpen && (
-        <div className="flex text-3xl flex-col justify-center gap-8 items-center bg-black bg-opacity-80 text-white absolute top-[70px] h-screen w-full z-[10]">
+        <div className="flex text-3xl flex-col justify-center gap-8 items-center bg-black bg-opacity-90 text-white absolute top-[70px] h-screen left-0 w-full z-[10]">
           {navLinks.map((link) => (
             <Link href={link.url} key={link.id}>
               {link.title}

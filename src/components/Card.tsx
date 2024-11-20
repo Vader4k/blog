@@ -9,7 +9,9 @@ const Card = () => {
     <div className="flex-[5]">
       <h1 className="font-semibold text-3xl mb-5">Recent Posts</h1>
       <CardContainer />
+      <div className="w-full">
       <Pagination />
+      </div>
     </div>
   );
 };
