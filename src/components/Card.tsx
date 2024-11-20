@@ -2,13 +2,16 @@ import React from "react";
 import Pagination from "./Pagination";
 import Image from "next/image";
 import { recentPosts } from "@/lib/recentposts";
-// import { useRouter } from "next/navigation";
 
-const Card = () => {
+const Card = async ({params} : {params?:string}) => {
+
+  const filtered = await recentPosts.filter((post) => post.category === params);
+  const post = params ? filtered : recentPosts
+
   return (
     <div className="flex-1 md:flex-[5]">
       <h1 className="font-semibold text-3xl mb-5">Recent Posts</h1>
-      <CardContainer />
+      <CardContainer posts={post}/>
       <div className="w-full">
       <Pagination />
       </div>
@@ -18,10 +21,10 @@ const Card = () => {
 
 export default Card;
 
-const CardContainer = () => {
+const CardContainer = ({posts}: {posts: typeof recentPosts}) => {
   return (
     <div className="py-5 flex flex-col gap-10">
-      {recentPosts.map((post) => (
+      {posts.map((post) => (
         <div className="flex justify-center lg:justify-start flex-wrap xl:flex-nowrap gap-10" key={post.id}>
           <Image className="max-w-[500px] w-full" width={400} height={300} alt={post.title} src={post.image} />
           <div className="flex flex-col justify-between items-start">

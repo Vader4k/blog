@@ -1,14 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { categories } from "@/lib/categories";
 import Link from "next/link";
-
-const colorMap: { [key: string]: string } = {
-  'pink-300': '#FBBFCA',
-  'yellow-300': '#FCE',
-  'brown-200': '#D9CBA0',
-  'yellow-200': '#FCE68A',
-  'blue-300': '#93C5FD',
-};
+import { colorMap } from "@/utils/getBgColor";
 
 const CategoryList = () => {
 
