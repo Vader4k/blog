@@ -14,8 +14,8 @@ const CategoryList = () => {
 
   return (
     <div className="py-10">
-      <h1 className="font-semibold text-4xl">Popular Categories</h1>
-      <div className="flex justify-between py-10 mt-5 gap-10">
+      <h1 className="font-semibold text-2xl md:text-4xl">Popular Categories</h1>
+      <div className="flex flex-wrap md:flex-nowrap justify-between py-5 md:py-10 mt-5 gap-10">
         {categories.map((category) => (
           <Link
             href={category.url}

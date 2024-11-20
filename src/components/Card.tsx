@@ -6,7 +6,7 @@ import { recentPosts } from "@/lib/recentposts";
 
 const Card = () => {
   return (
-    <div className="flex-[5]">
+    <div className="flex-1 md:flex-[5]">
       <h1 className="font-semibold text-3xl mb-5">Recent Posts</h1>
       <CardContainer />
       <div className="w-full">
@@ -22,16 +22,16 @@ const CardContainer = () => {
   return (
     <div className="py-5 flex flex-col gap-10">
       {recentPosts.map((post) => (
-        <div className="flex gap-10" key={post.id}>
-          <Image width={400} height={300} alt={post.title} src={post.image} />
+        <div className="flex justify-center lg:justify-start flex-wrap xl:flex-nowrap gap-10" key={post.id}>
+          <Image className="max-w-[500px] w-full" width={400} height={300} alt={post.title} src={post.image} />
           <div className="flex flex-col justify-between items-start">
             <div className="flex gap-1 items-center">
               <span className="text-gray-600 text-sm">{post.date}</span>
               -
               <span className="uppercase text-red-700 font-medium">{post.category}</span>
             </div>
-            <h1 className="font-bold text-2xl">{post.title}</h1>
-            <p className="text-gray-500 ">{truncateDescription(post.desc)}</p>
+            <h1 className="font-bold text-2xl max-w-[500px]">{post.title}</h1>
+            <p className="text-gray-500 max-w-[500px]">{truncateDescription(post.desc)}</p>
             <button type="button" className="border-b border-black py-1">Read More</button>
           </div>
         </div>

@@ -30,7 +30,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="flex-[2]">
+    <div className="flex-1 md:flex-[2]">
       <span className="text-sm text-gray-500">What{"'"}s hot</span>
       <h1 className="text-2xl font-bold">Most Popular</h1>
       <div className="py-8 flex flex-col gap-5 items-start">
@@ -78,15 +78,14 @@ const Menu = () => {
         <div className="py-8 flex flex-col gap-5">
           {recentPosts.slice(0, 3).map((post) => (
             <Link className="flex gap-3 items-center" key={post.id} href={"/"}>
-              <div className="relative flex items-center justify-center w-[100px] border-[3px] border-gray-300 rounded-full ">
-                <Image
-                  width={100}
-                  height={100}
-                  src={post.image}
-                  alt={post.title}
-                  className="rounded-full size-[60px] object-cover"
-                />
-              </div>
+              <Image
+                width={100}
+                height={100}
+                src={post.image}
+                alt={post.title}
+                className="rounded-full size-[60px] object-cover border-2 border-gray-400"
+              />
+
               <div className="flex flex-col items-start gap-1">
                 <span
                   style={{ backgroundColor: bgColor(post.category) }}
