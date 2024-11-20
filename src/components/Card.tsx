@@ -18,7 +18,7 @@ export default Card;
 
 const CardContainer = () => {
   return (
-    <div className="py-5 flex flex-col gap-10 px-5">
+    <div className="py-5 flex flex-col gap-10">
       {recentPosts.map((post) => (
         <div className="flex gap-10" key={post.id}>
           <Image width={400} height={300} alt={post.title} src={post.image} />

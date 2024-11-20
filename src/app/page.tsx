@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <Featured />
       <CategoryList />
-      <div className='flex justify-between'>
+      <div className='flex justify-between w-full gap-20'>
         <Card />
         <Menu />
       </div>
