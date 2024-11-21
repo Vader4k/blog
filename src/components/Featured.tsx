@@ -11,7 +11,7 @@ const Featured = () => {
           <Image className="h-[500px] w-full" src={'/44775.jpg'} width={500} height={500} alt="venice"/>
         </div>
         <div className="flex-1 items-start flex flex-col gap-5">
-          <h1 className="text-4xl font-medium">
+          <h1 className="text-2xl md:text-4xl font-medium">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Voluptates, quas.
           </h1>

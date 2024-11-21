@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
-  const session = false;
+  const session = true;
 
   const handleSignOut = async () => {
     await signOut();
@@ -40,7 +40,10 @@ const Navbar = () => {
               </Link>
             ))}
             {session ? (
-              <button onClick={handleSignOut}>Logout</button>
+              <div className="flex items-center gap-5">
+                <button onClick={handleSignOut}>Logout</button>
+                <Link href="/write">Write</Link>
+              </div>
             ) : (
               <Link href={"/login"}>Login</Link>
             )}
@@ -51,20 +54,39 @@ const Navbar = () => {
           onClick={() => setIsNavOpen(!isNavOpen)}
           className="flex flex-col gap-1 flex-1 md:hidden w-full items-end place-items-end"
         >
-          <div className={`w-6 border border-black transition-transform duration-300 ${isNavOpen ? "rotate-45 translate-y-1.5" : ""}`} />
-          <div className={`w-6 border border-black ${isNavOpen ? "opacity-0" : ""}`} />
-          <div className={`w-6 border border-black transition-transform duration-300 ${isNavOpen ? "rotate-[-45deg] -translate-y-1.5" : ""}`} />
+          <div
+            className={`w-6 border border-black transition-transform duration-300 ${
+              isNavOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          />
+          <div
+            className={`w-6 border border-black ${
+              isNavOpen ? "opacity-0" : ""
+            }`}
+          />
+          <div
+            className={`w-6 border border-black transition-transform duration-300 ${
+              isNavOpen ? "rotate-[-45deg] -translate-y-1.5" : ""
+            }`}
+          />
         </button>
       </nav>
       {isNavOpen && (
         <div className="flex text-3xl flex-col justify-center gap-8 items-center bg-black bg-opacity-90 text-white absolute top-[70px] h-screen left-0 w-full z-[10]">
           {navLinks.map((link) => (
-            <Link href={link.url} key={link.id}>
+            <Link
+              onClick={() => setIsNavOpen(false)}
+              href={link.url}
+              key={link.id}
+            >
               {link.title}
             </Link>
           ))}
           {session ? (
-            <button onClick={handleSignOut}>Logout</button>
+            <div>
+              <button onClick={handleSignOut}>Logout</button>
+              <button onClick={handleSignOut}>Write</button>
+            </div>
           ) : (
             <Link href={"/login"}>Login</Link>
           )}
