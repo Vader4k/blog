@@ -1,11 +1,12 @@
 import { signIn } from "@/auth";
 
-const LoginWGithub = () => {
+const LoginWGithub = async() => {
+
   return (
     <form
       action={async () => {
         "use server";
-        await signIn("google");
+        await signIn("google", {redirectTo: '/'});
       }}
     >
       <button

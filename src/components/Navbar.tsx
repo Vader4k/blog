@@ -1,17 +1,19 @@
-"use client";
-import Image from "next/image";
-import { navLinks } from "@/lib/navbar";
-import Link from "next/link";
-import { signOut } from "@/auth";
-import { useState } from "react";
+"use client"
+
+import Image from "next/image"
+import { navLinks } from "@/lib/navbar"
+import Link from "next/link"
+import { useSession } from "next-auth/react"
+import { useState } from "react"
+import { handleSignOut } from "@/app/actions/auth"
 
 const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
-  const session = true;
+  const { data: session, status } = useSession()
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
 
-  const handleSignOut = async () => {
-    await signOut();
-  };
+  if (status === "loading") {
+    return <div>loading...</div>
+  }
 
   return (
     <header className="sticky top-0 z-[20] bg-white border-b px-5 md:px-20">
@@ -41,7 +43,9 @@ const Navbar = () => {
             ))}
             {session ? (
               <div className="flex items-center gap-5">
-                <button onClick={handleSignOut}>Logout</button>
+                <form action={handleSignOut}>
+                  <button type="submit">Sign out</button>
+                </form>
                 <Link href="/write">Write</Link>
               </div>
             ) : (
@@ -84,8 +88,10 @@ const Navbar = () => {
           ))}
           {session ? (
             <div>
-              <button onClick={handleSignOut}>Logout</button>
-              <button onClick={handleSignOut}>Write</button>
+              <form action={handleSignOut}>
+                <button type="submit">Sign out</button>
+              </form>
+              <Link href="/write">Write</Link>
             </div>
           ) : (
             <Link href={"/login"}>Login</Link>
@@ -93,7 +99,7 @@ const Navbar = () => {
         </div>
       )}
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

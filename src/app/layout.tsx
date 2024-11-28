@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Layout from "@/components/Layout";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { SessionProvider } from "next-auth/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +33,11 @@ export default function RootLayout({
       >
         <div className="min-h-screen">
           <div className="max-w-[1536px] mx-auto">
-            <Layout>{children}</Layout>
+            <SessionProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </SessionProvider>
           </div>
         </div>
       </body>

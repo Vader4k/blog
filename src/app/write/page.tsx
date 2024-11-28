@@ -49,6 +49,9 @@ const WritePage = () => {
           className="my-10"
         />
       </div>
+      <button className="absolute top-10 right-20 py-1 px-5 bg-green-400 text-white rounded-2xl text-sm">
+        Publish
+      </button>
     </div>
   );
 };
