@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen">
-          <div className="max-w-[1536px] mx-auto">
+          <div className="max-w-[1536px] mx-auto px-5">
             <SessionProvider>
               <Navbar />
               {children}
